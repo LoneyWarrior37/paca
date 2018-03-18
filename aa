@@ -1,0 +1,29 @@
+program bbab;
+uses crt;
+var s,x,i,n,y,z,dem:integer;
+begin
+    clrscr;
+    repeat
+    write('Nhap n= (0<n)');
+    read(n); x:=n;
+    until n>0;
+    if n mod 4 = 0 then writeln(n,' khong chia het cho 4')
+    else writeln(n,' chia het cho 4'); dem:=0;
+    while n>0 do
+        begin
+        n:= n div 10;
+        dem:=dem+1;
+        end;
+    writeln('So ',x,' co ',dem,' chu so');
+    writeln('So dao nguoc cua ',x,' la: '); z:=x; i:=z;
+    while x>0 do
+        begin
+        y:=x mod 10;
+        writeln(y);
+        end;
+    while z>0 do
+        s:= s + z mod 10;
+    writeln('Tong cac chu so cua ',i,' la: ',s);
+    readln;
+    readln;
+end.
